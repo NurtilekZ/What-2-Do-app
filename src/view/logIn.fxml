@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" depthTest="DISABLE" prefHeight="457.0" prefWidth="666.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogIn">
+   <children>
+      <HBox alignment="CENTER" prefHeight="93.0" prefWidth="666.0" spacing="160.0" style="-fx-background-color: #003c8f;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="180.0" text="What 2-Do" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="logInSignUpButton" prefHeight="36.0" prefWidth="68.0" style="-fx-background-color: #002171;" text="Sign Up" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="#f81da8" offset="0.9923371647509578" />
+                        <Stop color="#f81da8" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="220.0" />
+         </padding>
+      </HBox>
+      <AnchorPane depthTest="ENABLE" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="666.0" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXTextField fx:id="logInUsername" alignment="CENTER" layoutX="238.0" layoutY="106.0" prefHeight="25.0" prefWidth="190.0" promptText="Username" />
+            <JFXButton fx:id="logInButton" alignment="CENTER" layoutX="238.0" layoutY="226.0" prefHeight="37.0" prefWidth="190.0" style="-fx-background-color: #002171;" text="Log in" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#24e515" />
+                        <Stop color="#2b78ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_IN" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXPasswordField fx:id="logInPassword" alignment="CENTER" layoutX="238.0" layoutY="164.0" prefHeight="25.0" prefWidth="190.0" promptText="Password" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="212.0" layoutY="183.0" size="20" />
+            <FontAwesomeIconView glyphName="USER" layoutX="214.0" layoutY="125.0" size="20" text="" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

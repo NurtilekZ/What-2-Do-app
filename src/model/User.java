@@ -1,0 +1,70 @@
+package model;
+
+public class User {
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private String eMail;
+    private String password;
+    private String location;
+
+    public User() {
+    }
+
+    public User(String firstName, String lastName, String userName, String eMail, String password, String location) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.eMail = eMail;
+        this.password = password;
+        this.location = location;
+    }
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+}
