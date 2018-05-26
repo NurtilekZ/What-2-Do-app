@@ -1,17 +1,32 @@
 package model;
 
+import java.sql.Date;
+
 public class Task {
+
+    private int userId;
     private String task;
-    private long datecreated;
-    private String description;
+    private Date date;
+    private String location;
+    private String notes;
 
     public Task() {
     }
 
-    public Task(String task, long datecreated, String description) {
+    public Task(Integer userId, String task, Date date, String location, String notes) {
+        this.userId = userId;
         this.task = task;
-        this.datecreated = datecreated;
-        this.description = description;
+        this.date = date;
+        this.location = location;
+        this.notes = notes;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getTask() {
@@ -22,19 +37,27 @@ public class Task {
         this.task = task;
     }
 
-    public long getDatecreated() {
-        return datecreated;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDatecreated(long datecreated) {
-        this.datecreated = datecreated;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public String getDescription() {
-        return description;
+    public String getNotes() {
+        return notes;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }

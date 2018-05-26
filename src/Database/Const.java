@@ -16,6 +16,9 @@ public class Const {
 
     //USERS Table Columns Names
     public static final String TASKS_TASKID = "taskid";
-    public static final String TASKS_DATE = "datecreated";
-    public static final String TASKS_DESCRIPTION = "description";
+    public static final String TASKS_TASK = "task";
+    public static final String TASKS_DATE = "date";
+    public static final String TASK_LOCATION = "location";
+    public static final String TASKS_NOTES = "notes";
+
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootCellPane" prefHeight="60.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FontAwesomeIconView fx:id="checkButton" accessibleRole="BUTTON" fill="#c6c6c6" glyphName="CHECK_CIRCLE_ALT" layoutX="14.0" layoutY="43.0" size="40" textAlignment="CENTER" />
+      <Label fx:id="taskName" layoutX="59.0" layoutY="4.0" prefHeight="31.0" prefWidth="430.0" text="Label">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="noteText" layoutX="80.0" layoutY="35.0" prefHeight="21.0" prefWidth="412.0" text="Label" textFill="#545353">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="date" alignment="CENTER_RIGHT" layoutX="490.0" layoutY="34.0" prefHeight="21.0" prefWidth="96.0" text="Label" textFill="#1149f7" />
+      <FontAwesomeIconView fill="#003dbf" fontSmoothingType="LCD" glyphName="CLONE" layoutX="59.0" layoutY="50.0" size="15" />
+      <FontAwesomeIconView fx:id="deleteButton" accessibleRole="BUTTON" glyphName="TRASH" layoutX="578.0" layoutY="20.0" size="20" />
+   </children>
+</AnchorPane>

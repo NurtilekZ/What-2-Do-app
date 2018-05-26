@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddNewTask">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="90.0" prefHeight="25.0" prefWidth="230.0" spacing="3.0">
+         <children>
+            <FontAwesomeIconView accessibleRole="BUTTON" glyphName="CHECK" size="17" text="" wrappingWidth="17.142855249345303" />
+            <Label text="Task">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="taskName" prefHeight="25.0" prefWidth="176.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="146.0" prefHeight="25.0" prefWidth="230.0" spacing="3.0">
+         <children>
+            <FontAwesomeIconView accessibleRole="BUTTON" glyphName="CALENDAR_ALT" size="17" wrappingWidth="17.142855249345303" />
+            <Label text="Date">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="datePicker" defaultColor="#2170c2" prefHeight="25.0" prefWidth="175.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="204.0" prefHeight="25.0" prefWidth="230.0" spacing="2.0">
+         <children>
+            <FontAwesomeIconView accessibleRole="BUTTON" glyphName="GLOBE" size="17" text="" wrappingWidth="15.142855249345303" />
+            <Label prefHeight="21.0" prefWidth="61.0" text="Location">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="locationText" prefHeight="25.0" prefWidth="149.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="333.0" layoutY="146.0" prefHeight="25.0" prefWidth="230.0" spacing="3.0">
+         <children>
+            <FontAwesomeIconView accessibleRole="BUTTON" glyphName="CHECK_CIRCLE" size="17" text="" wrappingWidth="16.142855249345303" />
+            <Label text="InnerTask">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <VBox fx:id="innerTaskPane" alignment="CENTER" spacing="5.0">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <children>
+                  <JFXButton fx:id="addInnerTaskButton" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #11111111;" text="Add" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="333.0" layoutY="90.0" prefHeight="31.0" prefWidth="230.0" spacing="2.0">
+         <children>
+            <FontAwesomeIconView accessibleRole="BUTTON" glyphName="COPY" size="17" wrappingWidth="17.142855249345303" />
+            <Label text="Notes">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="notesArea" prefHeight="31.0" prefWidth="168.0" />
+         </children>
+      </HBox>
+      <JFXButton fx:id="saveTaskButton" alignment="CENTER" graphicTextGap="10.0" layoutX="185.0" layoutY="295.0" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: #0d47a1;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView accessibleRole="BUTTON" fill="WHITE" glyphName="INBOX" size="25" wrappingWidth="17.142855249345303" />
+         </graphic>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00d0ff" />
+                  <Stop color="#00ff6d" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <AnchorPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #003c8f;">
+         <children>
+            <Label layoutX="228.0" layoutY="13.0" text="New Task" textFill="WHITE">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="PAPER_PLANE" layoutX="189.0" layoutY="46.0" size="25" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

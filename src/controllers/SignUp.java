@@ -60,23 +60,7 @@ public class SignUp {
                 System.out.println("Confirm your password!");
             }
         });
-        goBack.setOnAction(event -> {
-            //take user to signUp Screen
-            signUpButton.getScene().getWindow().hide();
-            FXMLLoader signUpWindow = new FXMLLoader();
-            signUpWindow.setLocation(getClass().getResource("../view/logIn.fxml"));
-            try {
-                signUpWindow.load();
-            } catch (IOException e) { e.printStackTrace(); }
-
-            Parent root = signUpWindow.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.getIcons().add(new Image("img/web_hi_res_512.png"));
-            stage.setTitle("What 2-Do");
-            stage.setResizable(false);
-            stage.show();
-        });
+        goBack.setOnAction(event -> signUpButton.getScene().getWindow().hide());
     }
 
     private void createUser() {

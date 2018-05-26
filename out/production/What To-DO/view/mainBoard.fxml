@@ -2,18 +2,16 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXListView?>
-<?import com.jfoenix.controls.JFXTextArea?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="534.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainBoard">
+<VBox prefHeight="535.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainBoard">
    <children>
       <AnchorPane prefHeight="150.0" prefWidth="753.0" style="-fx-background-color: #003c8f;">
          <children>
@@ -21,32 +19,44 @@
                <font>
                   <Font size="15.0" />
                </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ROCKET" size="20" />
+               </graphic>
             </JFXButton>
             <JFXButton fx:id="yesterdayButton" layoutY="96.0" prefHeight="43.0" prefWidth="138.0" style="-fx-background-radius: 0;" text="Yesterday" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="020" text="" />
+               </graphic>
             </JFXButton>
             <JFXButton fx:id="morrowButton" layoutX="276.0" layoutY="96.0" prefHeight="43.0" prefWidth="138.0" style="-fx-background-radius: 0;" text="Morrow" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BULLSEYE" size="20" />
+               </graphic>
             </JFXButton>
             <JFXButton fx:id="overdueButton" layoutX="414.0" layoutY="96.0" prefHeight="43.0" prefWidth="138.0" style="-fx-background-radius: 0;" text="Overdue" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="20" />
+               </graphic>
             </JFXButton>
             <Label layoutX="280.0" layoutY="29.0" text="What 2-Do" textFill="WHITE">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <FontAwesomeIconView fill="WHITE" glyphName="BULLSEYE" layoutX="292.0" layoutY="124.0" size="20" />
-            <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" layoutX="428.0" layoutY="124.0" size="20" />
-            <FontAwesomeIconView fill="WHITE" glyphName="ROCKET" layoutX="164.0" layoutY="124.0" size="20" />
-            <FontAwesomeIconView fx:id="settingsButton" accessibleRole="BUTTON" fill="#f5f5f5" glyphName="COG" layoutX="717.0" layoutY="125.0" size="25" />
-            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="14.0" layoutY="124.0" size="020" text="" />
+            <JFXButton fx:id="settingsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="711.0" layoutY="100.0" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 100;" text=" ">
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="IMAGE_VIEW" fill="#f5f5f5" glyphName="COG" size="25" wrappingWidth="21.428571701049805" />
+               </graphic>
+            </JFXButton>
          </children>
          <effect>
             <DropShadow radius="4.75" width="0.0" />
@@ -54,82 +64,21 @@
       </AnchorPane>
       <AnchorPane prefHeight="414.0" prefWidth="753.0">
          <children>
-            <JFXListView fx:id="tasksListView" prefHeight="404.0" prefWidth="524.0" />
-            <VBox fx:id="detailsPane" layoutX="524.0" prefHeight="404.0" prefWidth="229.0" spacing="10.0">
-               <children>
-                  <JFXButton prefHeight="34.0" prefWidth="64.0" style="-fx-background-color: #0d47a1;" text="Done" textFill="WHITE">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </JFXButton>
-                  <HBox alignment="BOTTOM_LEFT" spacing="3.0">
-                     <children>
-                        <Label text="Task">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <FontAwesomeIconView accessibleRole="BUTTON" glyphName="PENCIL" size="17" wrappingWidth="17.142855249345303" />
-                        <JFXTextField fx:id="taskName" prefHeight="25.0" prefWidth="156.0" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="BOTTOM_LEFT" spacing="3.0">
-                     <children>
-                        <Label text="Date">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <FontAwesomeIconView accessibleRole="BUTTON" glyphName="PENCIL" size="17" wrappingWidth="17.142855249345303" />
-                        <JFXTextField fx:id="Date" prefHeight="25.0" prefWidth="153.0" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="BOTTOM_LEFT" spacing="2.0">
-                     <children>
-                        <Label prefHeight="21.0" prefWidth="61.0" text="Location">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <FontAwesomeIconView accessibleRole="BUTTON" glyphName="PENCIL" size="17" wrappingWidth="17.142855249345303" />
-                        <JFXTextField fx:id="locationText" />
-                     </children>
-                  </HBox>
-                  <HBox spacing="3.0">
-                     <children>
-                        <Label text="InnerTask">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <FontAwesomeIconView accessibleRole="BUTTON" glyphName="PENCIL" size="17" wrappingWidth="17.142855249345303" />
-                        <VBox alignment="CENTER" spacing="5.0">
-                           <padding>
-                              <Insets left="5.0" right="5.0" />
-                           </padding>
-                           <children>
-                              <JFXButton fx:id="addInnerTaskButton" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #11111111;" text="Add" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <HBox alignment="BOTTOM_LEFT" spacing="2.0">
-                     <children>
-                        <Label text="Notes">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <FontAwesomeIconView accessibleRole="BUTTON" glyphName="PENCIL" size="17" wrappingWidth="17.142855249345303" />
-                        <JFXTextArea fx:id="notesArea" prefHeight="32.0" prefWidth="148.0" />
-                     </children>
-                  </HBox>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-            </VBox>
-            <FontAwesomeIconView fx:id="addEventButton" accessibleRole="BUTTON" fill="#0d47a1" glyphName="PLUS_CIRCLE" layoutX="666.0" layoutY="379.0" size="65" />
+            <JFXListView fx:id="tasksListView" prefHeight="404.0" prefWidth="755.0" />
+            <JFXButton fx:id="addEventButton" alignment="CENTER" contentDisplay="CENTER" layoutX="664.0" layoutY="314.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 100; -fx-background-color: #0d47a1;" text=" ">
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="BUTTON" boundsType="VISUAL" fill="WHITE" glyphName="PLUS" size="55" smooth="false" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="35.35714340209961" />
+               </graphic>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00ccff" />
+                        <Stop color="#00ccff" offset="0.007662835249042145" />
+                        <Stop color="#001eff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>
