@@ -1,11 +1,11 @@
 # What-2-Do-app
 
 # Topic addressed by the project:
-	Planning and preparing for everyday tasks.
+  Planning and preparing for everyday tasks.
   Chaotic and unplanned days that makes usual routine of dozens of people. 
 
 # Background:
-	Nowadays to-do apps are becoming more and more popular because usual paper notebooks and stickers are by the time become rot and tear   off. In addition in modern life people working with laptops more often than any paper and this is a good reason for use PC and laptops   to improve personal time-management and also good for environment.
+Nowadays to-do apps are becoming more and more popular because usual paper notebooks and stickers are by the time become rot and tear   off. In addition in modern life people working with laptops more often than any paper and this is a good reason for use PC and laptops   to improve personal time-management and also good for environment.
   
 # Aim of the project (what):
   -Productivity
@@ -13,7 +13,7 @@
   -Right schedule of the final user.
   
 # Objectives of the project (why):
-	-to make users day/week more productive and planned.
+  -to make users day/week more productive and planned.
   -to reduce wasting time for useless things.
   -to help user to achieve goals and to keep move forward.
 
@@ -24,10 +24,10 @@
 -
 
 # Estimative budget:
-	Zero budget
+  Zero budget
   
 # Proposed partners:
-	Personal work
+  Personal work
   
 # Contact person
   Name      :Nurtilek
