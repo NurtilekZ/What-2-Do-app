@@ -1,6 +1,7 @@
 package controllers;
 
 import Database.DatabaseHandler;
+import animations.Shaker;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -54,15 +55,17 @@ public class SignUp {
     @FXML
     void initialize() {
         signUpButton.setOnAction(event -> {
-            if (signUpPassword.getText().equals(signUpConfirm.getText())){
+            if (!signUpUserName.getText().equals("") & signUpPassword.getText().equals(signUpConfirm.getText())){
                 createUser();
+                signUpButton.getScene().getWindow().hide();
             } else {
-                System.out.println("Confirm your password!");
+                Shaker shaker = new Shaker(signUpButton);
+                shaker.shake();
+                System.out.println("Fill in all fields!!!");
             }
         });
         goBack.setOnAction(event -> signUpButton.getScene().getWindow().hide());
     }
-
     private void createUser() {
         DatabaseHandler databaseHandler = new DatabaseHandler();
 

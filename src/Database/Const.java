@@ -20,5 +20,5 @@ public class Const {
     public static final String TASKS_DATE = "date";
     public static final String TASK_LOCATION = "location";
     public static final String TASKS_NOTES = "notes";
-
+    public static final String TASKS_DONE = "done";
 }

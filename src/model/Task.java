@@ -5,10 +5,12 @@ import java.sql.Date;
 public class Task {
 
     private int userId;
+    private int taskId;
     private String task;
     private Date date;
     private String location;
     private String notes;
+    private boolean done;
 
     public Task() {
     }
@@ -59,5 +61,21 @@ public class Task {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public int getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(int taskid) {
+        this.taskId = taskid;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
+    }
+
+    public boolean isDone(){
+        return done;
     }
 }

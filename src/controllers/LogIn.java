@@ -23,12 +23,6 @@ import model.User;
 public class LogIn {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private JFXButton logInSignUpButton;
 
     @FXML
@@ -63,7 +57,6 @@ public class LogIn {
                     counter++;
                     String name = userRow.getString("firstname");
                     userId = userRow.getInt("userid");
-                    System.out.println("Welcome " + name);
                 }
 
                 if (counter == 1){
@@ -79,11 +72,11 @@ public class LogIn {
         logInSignUpButton.setOnAction(event -> showSignUpScreen());
     }
 
-    private void switchToMainBoardScreen() {
+    private void switchToMainBoardScreen() throws SQLException {
         //take user to Main Board Screen
         logInButton.getScene().getWindow().hide();
         FXMLLoader mainBoardScreen = new FXMLLoader();
-        mainBoardScreen.setLocation(getClass().getResource("../view/mainBoard.fxml"));
+        mainBoardScreen.setLocation(getClass().getResource("/view/mainBoard.fxml"));
         try {
             mainBoardScreen.load();
         } catch (IOException e) { e.printStackTrace(); }
@@ -96,15 +89,16 @@ public class LogIn {
         stage.setResizable(false);
         stage.setHeight(570);
         stage.setWidth(755);
-        stage.show();
 
         MainBoard mainBoard = mainBoardScreen.getController();
         mainBoard.setUserId(userId);
+
+        stage.show();
     }
     private void showSignUpScreen(){
         //take user to signUp Screen
         FXMLLoader signUpWindow = new FXMLLoader();
-        signUpWindow.setLocation(getClass().getResource("../view/signUp.fxml"));
+        signUpWindow.setLocation(getClass().getResource("/view/signUp.fxml"));
         try {
             signUpWindow.load();
         } catch (IOException e) { e.printStackTrace(); }
