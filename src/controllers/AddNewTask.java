@@ -76,7 +76,7 @@ public class AddNewTask {
         String loc = locationText.getText().trim();
         String note = notesArea.getText().trim();
 
-        Task task = new Task(getUserId(), name,date,loc,note);
+        Task task = new Task(MainBoard.userId, name,date,loc,note);
 
         databaseHandler.insertTask(task);
     }
