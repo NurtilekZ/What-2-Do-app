@@ -21,8 +21,8 @@ Nowadays to-do apps are becoming more and more popular because usual paper noteb
   -Deploy for production
 	
 # Proposed activities:
--Adding tasks and checking progress
--Sending feedbacks about app and suggestions
+ -Adding tasks and checking progress
+ -Sending feedbacks about app and suggestions
 
 # Estimative budget:
   Zero budget
