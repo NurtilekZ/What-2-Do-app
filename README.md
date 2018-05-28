@@ -1,5 +1,5 @@
 # What-2-Do-app
-  *Note that the Inner Tasks Fuction is in progress at the moment*
+  *Note that the Inner Tasks Function is in progress at the moment*
 # Topic addressed by the project:
   Planning and preparing for everyday tasks.
   Chaotic and unplanned days that makes usual routine of dozens of people. 
