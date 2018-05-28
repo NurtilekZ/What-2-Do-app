@@ -42,32 +42,33 @@ public class LogIn {
         databaseHandler = new DatabaseHandler();
 
         logInButton.setOnAction(event -> {
-            String userName = logInUsername.getText().trim();
-            String pwd = logInPassword.getText().trim();
+            if (logInUsername != null & logInPassword != null) {
+                String userName = logInUsername.getText().trim();
+                String pwd = logInPassword.getText().trim();
 
-            User user = new User();
-            user.setUserName(userName);
-            user.setPassword(pwd);
+                User user = new User();
+                user.setUserName(userName);
+                user.setPassword(pwd);
 
-            ResultSet userRow = databaseHandler.getUser(user);
-            int counter = 0;
+                ResultSet userRow = databaseHandler.getUser(user);
+                int counter = 0;
 
-            try{
-                while (userRow.next()){
-                    counter++;
-                    String name = userRow.getString("firstname");
-                    userId = userRow.getInt("userid");
-                }
+                try {
+                    while (userRow.next()) {
+                        counter++;
+                        String name = userRow.getString("firstname");
+                        userId = userRow.getInt("userid");
+                    }
 
-                if (counter == 1){
-                    switchToMainBoardScreen();
-                } else {
-                    Shaker shaker = new Shaker(logInUsername);
-                    Shaker shaker2 = new Shaker(logInPassword);
-                    shaker.shake();
-                    shaker2.shake();
-                }
-            } catch (SQLException e){}
+                    if (counter == 1) {
+                        switchToMainBoardScreen();
+                    } else {
+                       incorrectInputReminder();
+                    }
+                } catch (SQLException e) { }
+            } else {
+                incorrectInputReminder();
+            }
         });
         logInSignUpButton.setOnAction(event -> showSignUpScreen());
     }
@@ -112,5 +113,12 @@ public class LogIn {
         stage.initOwner(logInSignUpButton.getScene().getWindow());
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();
+    }
+
+    private void incorrectInputReminder(){
+        Shaker shaker = new Shaker(logInUsername);
+        Shaker shaker2 = new Shaker(logInPassword);
+        shaker.shake();
+        shaker2.shake();
     }
 }
