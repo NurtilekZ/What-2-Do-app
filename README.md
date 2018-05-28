@@ -13,15 +13,16 @@ Nowadays to-do apps are becoming more and more popular because usual paper noteb
   -Right schedule of the final user.
   
 # Objectives of the project (why):
-  -to make users day/week more productive and planned.
-  -to reduce wasting time for useless things.
-  -to help user to achieve goals and to keep move forward.
+- To make users day/week more productive and planned.
+- To reduce wasting time for useless things.
+- To help user to achieve goals and to keep move forward.
 
 # Expected outcomes:
--
+  -Deploy for production
 	
 # Proposed activities:
--
+-Adding tasks and checking progress
+-Sending feedbacks about app and suggestions
 
 # Estimative budget:
   Zero budget
