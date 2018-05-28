@@ -50,6 +50,8 @@ public class Settings {
                     databaseHandler.deleteAllTasks(getUserId());
                 } catch (SQLException | ClassNotFoundException e) { e.printStackTrace(); }
                 setOut(true);
+                switchToLogInScreen();
+                deleteUserButton.getScene().getWindow().hide();
             } else {
                 alert.close();
             }

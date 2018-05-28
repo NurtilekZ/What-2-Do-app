@@ -86,5 +86,7 @@ public class AddNewTask {
     }
     public void setUserId(int userId) {
         this.userId = userId;
+        System.out.println(this.userId);
+        System.out.println(MainBoard.userId);
     }
 }
